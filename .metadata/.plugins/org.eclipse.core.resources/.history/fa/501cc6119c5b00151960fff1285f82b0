@@ -1,0 +1,19 @@
+package pom;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class XlCreation 
+{
+	public static void main(String[] args) throws FileNotFoundException
+	{
+		FileOutputStream fos=new FileOutputStream("C:\\dama\\project\\src\\xlfiles\\gmail.xlsx");
+		XSSFWorkbook wb=new XSSFWorkbook();
+		XSSFSheet ws=wb.createSheet("sheet1");
+		
+	}
+
+}

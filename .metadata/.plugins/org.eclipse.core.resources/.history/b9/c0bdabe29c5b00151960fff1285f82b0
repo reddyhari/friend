@@ -1,0 +1,25 @@
+package pom;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+
+public class Data extends Control
+{
+	public void dataForlogin() throws InterruptedException, IOException
+	{
+		FileInputStream fis=new FileInputStream("C:\\dama\\project\\gmail.properties");
+		
+		
+		Properties p=new Properties();
+		p.load(fis);
+		driver.findElement(By.id(p.getProperty("uname"))).sendKeys("damaharinathreddy00@gmail.com");
+		driver.findElement(By.id(p.getProperty("btn"))).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id(p.getProperty("pwd"))).sendKeys("harinath");
+		driver.findElement(By.id(p.getProperty("btn2"))).click();
+	}
+
+}

@@ -1,0 +1,17 @@
+package pom;
+
+import org.openqa.selenium.By;
+
+public class Data extends Control
+{
+	public void dataForlogin() throws InterruptedException
+	{
+		
+		driver.findElement(By.id("Email")).sendKeys("damaharinathreddy00@gmail.com");
+		driver.findElement(By.id("next")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("")).sendKeys("harinath");
+		driver.findElement(By.id("")).click();
+	}
+
+}
